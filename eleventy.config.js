@@ -4,10 +4,13 @@ const { execSync } = require('child_process')
 
 module.exports = function(eleventyConfig) {
 	eleventyConfig.ignores.add("README.md");
-	eleventyConfig.setServerPassthroughCopyBehavior("copy");
+
+	// eleventyConfig.setServerPassthroughCopyBehavior("copy");
 
 	eleventyConfig.addPassthroughCopy("assets/");
 	eleventyConfig.addPassthroughCopy("img/");
+	eleventyConfig.addPassthroughCopy("video/");
+
 	eleventyConfig.addPassthroughCopy({
 		"node_modules/chartist/dist/chartist.min.css": "assets/chartist.min.css",
 		"node_modules/chartist/dist/chartist.min.js": "assets/chartist.min.js",
@@ -27,9 +30,9 @@ module.exports = function(eleventyConfig) {
 
 	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 
-	// pagefind search
+	// Pagefind plugin
 	eleventyConfig.on('eleventy.after', () => {
-		console.log('indexing search using pagefind');
+		console.log('[pagefind] Creating search index.');
 		execSync(`npx pagefind --source _site --glob \"[0-9]*/**/*.html\"`, { encoding: 'utf-8' });
-  });
+	});
 };
