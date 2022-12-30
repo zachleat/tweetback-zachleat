@@ -2,6 +2,3 @@ node_modules/
 .cache
 .env
 package-lock.json
-
-# This file is too big for GitHub so we’re just checking in the _site folder
-database/tweet.db
