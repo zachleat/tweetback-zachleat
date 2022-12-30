@@ -29,14 +29,4 @@ module.exports = function(eleventyConfig) {
 	});
 
 	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
-
-	// Pagefind plugin
-	eleventyConfig.on('eleventy.after', ({ runMode }) => {
-		if(runMode !== "build") {
-			return;
-		}
-
-		console.log('[pagefind] Creating search index.');
-		execSync(`npx pagefind --source _site --glob \"[0-9]*/**/*.html\"`, { encoding: 'utf-8' });
-	});
 };

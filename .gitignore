@@ -2,4 +2,6 @@ node_modules/
 .cache
 .env
 package-lock.json
-_site
+_site/img
+_site/video
+_site/_pagefind
