@@ -2,6 +2,11 @@ node_modules/
 .cache
 .env
 package-lock.json
+
+# No DB
+database/tweet.db
+
+# No images/videos/pagefind index
 _site/img
 _site/video
 _site/_pagefind
