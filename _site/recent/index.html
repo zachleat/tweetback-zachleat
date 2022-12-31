@@ -5,20 +5,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>zachleat’s Twitter Archive</title>
 		<meta name="description" content="A read-only indieweb self-hosted archive of zachleat’s tweets.">
-		<script>
-		if("classList" in document.documentElement) {
-			document.documentElement.classList.add("has-js");
-		}
-		</script>
 
-		
-			<link rel="stylesheet" href="/twitter/assets/chartist.min.css">
-			<link rel="stylesheet" href="/twitter/assets/chart.css">
-			<script src="/twitter/assets/chartist.min.js"></script>
-			<script src="/twitter/assets/chart.js"></script>
-			<link rel="profile" href="https://microformats.org/profile/hatom">
-			
-
+		<link rel="profile" href="https://microformats.org/profile/hatom">
 		<link rel="stylesheet" href="/twitter/assets/style.css">
 		<script src="/twitter/assets/script.js" type="module"></script>
 		<script src="/twitter/assets/is-land.js" type="module"></script>
@@ -36,14 +24,7 @@
 		<main>
 			<h2>Most Recent 40 Tweets</h2>
 		<p>Not including replies or retweets or mentions.</p>
-		<h3>Mood</h3>
-		<div class="twtr-sentiment js">
-			<div class="twtr-sentiment-chart ct-chart"></div>
-			<div class="twtr-sentiment-label">
-				⬅️ New
-				<span>⬆️ 🙂<br>⬇️ 🙁</span>
-			</div>
-		</div>
+
 		<h3>Tweets</h3>
 		<ol class="tweets tweets-linear-list h-feed hfeed">
 			<li id="1594179876344705025" class="tweet h-entry" data-pagefind-index-attrs="id">
@@ -619,10 +600,6 @@ Any hypotheses as to why jQuery’s percentages are increasing? <is-land on:visi
 			</span>
 		</li>
 		</ol>
-		<script>
-		var series = getSentimentsFromList( '.tweets' );
-		makeSentimentChart( '.twtr-sentiment-chart', series );
-		</script>
 		</main>
 		<footer>
 			<p>An open source project from <a href="https://github.com/tweetback">tweetback</a>.</p>

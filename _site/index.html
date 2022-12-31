@@ -5,20 +5,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>zachleat’s Twitter Archive</title>
 		<meta name="description" content="A read-only indieweb self-hosted archive of zachleat’s tweets.">
-		<script>
-		if("classList" in document.documentElement) {
-			document.documentElement.classList.add("has-js");
-		}
-		</script>
 
-		
-			<link rel="stylesheet" href="/twitter/assets/chartist.min.css">
-			<link rel="stylesheet" href="/twitter/assets/chart.css">
-			<script src="/twitter/assets/chartist.min.js"></script>
-			<script src="/twitter/assets/chart.js"></script>
-			<link rel="profile" href="https://microformats.org/profile/hatom">
-			
-
+		<link rel="profile" href="https://microformats.org/profile/hatom">
 		<link rel="stylesheet" href="/twitter/assets/style.css">
 		<script src="/twitter/assets/script.js" type="module"></script>
 		<script src="/twitter/assets/is-land.js" type="module"></script>
@@ -39,28 +27,20 @@
 			<span class="tweets-primary-count-num">46,288</span> tweets
 		</h2>
 
-		<div class="js">
-			<h2>Search Tweets:</h2>
-			<div class="tweets-search">
-				<is-land on:visible="">
-					<template data-island="">
-						<div id="search" class="tweets-search"></div>
-						<link href="/twitter/_pagefind/pagefind-ui.css" rel="stylesheet">
-						<script src="/twitter/_pagefind/pagefind-ui.js" onload="new PagefindUI({ element: '#search', showImages: false });"></script>
-					</template>
-				</is-land>
-			</div>
-		</div>
+		<is-land on:visible="" on:save-data="false">
+			<template data-island="">
+				<h2>Search Tweets:</h2>
+				<div class="tweets-search">
+					<div id="search" class="tweets-search"></div>
+					<link href="/twitter/_pagefind/pagefind-ui.css" rel="stylesheet">
+					<script src="/twitter/_pagefind/pagefind-ui.js" onload="new PagefindUI({ element: '#search', showImages: false });"></script>
+				</div>
+			</template>
+		</is-land>
 
 		<div>
 			<h2><a href="/twitter/recent/">Recent:</a></h2>
-			<div class="twtr-sentiment twtr-sentiment-max js">
-				<div class="twtr-sentiment-chart ct-chart"></div>
-				<div class="twtr-sentiment-label">
-					⬅️ New
-					<span>⬆️ 🙂<br>⬇️ 🙁</span>
-				</div>
-			</div>
+
 			<ol class="tweets tweets-linear-list h-feed hfeed" id="tweets-recent-home">
 				<li id="1594179876344705025" class="tweet h-entry" data-pagefind-index-attrs="id">
 		
@@ -424,7 +404,7 @@ via <a href="https://twitter.com/nicknisi/" class="tweet-username h-card">@<span
 			<div class="lo-c">
 				<h4>Most Replies To (Last 12 months)</h4>
 				<ol>
-					<li><a href="https://twitter.com/toddmorey">toddmorey</a> 83 replies</li><li><a href="https://twitter.com/DavidDarnes">DavidDarnes</a> 70 replies</li><li><a href="https://twitter.com/scottjehl">scottjehl</a> 43 replies</li><li><a href="https://tweets.henry.codes/">xdesro</a> 41 replies</li><li><a href="https://twitter.com/brianleroux">brianleroux</a> 41 replies</li>
+					<li><a href="https://twitter.com/toddmorey">toddmorey</a> 83 replies</li><li><a href="https://twitter.com/DavidDarnes">DavidDarnes</a> 69 replies</li><li><a href="https://twitter.com/scottjehl">scottjehl</a> 43 replies</li><li><a href="https://tweets.henry.codes/">xdesro</a> 41 replies</li><li><a href="https://twitter.com/brianleroux">brianleroux</a> 41 replies</li>
 				</ol>
 			</div>
 		</div>
@@ -432,7 +412,7 @@ via <a href="https://twitter.com/nicknisi/" class="tweet-username h-card">@<span
 
 		<h2 id="links">Most Frequent Sites I’ve Linked To</h2>
 		<h3>76.6% of the links I’ve posted are using the <code>https:</code> protocol  (6,259 of 8,174)</h3>
-		<h3>95.8% of the links I’ve posted in the last 12 months are using the <code>https:</code> protocol  (1,014 of 1,058)</h3>
+		<h3>95.8% of the links I’ve posted in the last 12 months are using the <code>https:</code> protocol  (1,012 of 1,056)</h3>
 
 		<div class="lo" style="--lo-stackpoint: 20em">
 			<div class="lo-c">
@@ -468,10 +448,6 @@ via <a href="https://twitter.com/nicknisi/" class="tweet-username h-card">@<span
 		<p><em>386 swear words on 379 tweets (1.0% of all tweets***)</em></p>
 		<p>***: does not include retweets</p>
 
-		<script>
-		var series = getSentimentsFromList( '#tweets-recent-home' );
-		makeSentimentChart( '.twtr-sentiment-chart', series );
-		</script>
 		<template id="rendered-twitter-link"><a href="/twitter/1234567890123456789/">twitter link</a></template>
 
 		</main>
