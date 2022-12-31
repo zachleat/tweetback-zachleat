@@ -9,7 +9,7 @@
     "fetch-new-data": "node database/fetchFromApi.js",
     "build": "npx @11ty/eleventy --quiet --pathprefix=twitter",
     "build-production": "./build-production.sh",
-    "start": "npx @11ty/eleventy --quiet --serve"
+    "start": "npx @11ty/eleventy --quiet --serve --pathprefix=twitter"
   },
   "keywords": [],
   "contributors": [
