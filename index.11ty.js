@@ -275,17 +275,17 @@ class Index extends Twitter {
 		</is-land>
 
 		<div>
-			<h2><a href="/recent/">Recent:</a></h2>
-
-			<ol class="tweets tweets-linear-list h-feed hfeed" id="tweets-recent-home">
-				${recentTweetsHtml.join("")}
+			<h2><a href="/popular/">Popular:</a></h2>
+			<ol class="tweets tweets-linear-list">
+				${mostPopularTweetsHtml.join("")}
 			</ol>
 		</div>
 
 		<div>
-			<h2><a href="/popular/">Popular:</a></h2>
-			<ol class="tweets tweets-linear-list">
-				${mostPopularTweetsHtml.join("")}
+			<h2><a href="/recent/">Recent:</a></h2>
+
+			<ol class="tweets tweets-linear-list h-feed hfeed" id="tweets-recent-home">
+				${recentTweetsHtml.join("")}
 			</ol>
 		</div>
 
